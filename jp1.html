@@ -61,6 +61,28 @@
                 </tr>
             </tbody>
         </table>
+         </div>
+        <div class="output">
+        <button type="button" id="output">output</button>
+        
+        <script>
+            // Function to implement OR gate logic
+            function orGate(input1, input2) {
+                return input1 || input2;
+            }
+            var x = document.getElementById('ip1').value
+            var y = document.getElementById('ip2').value
+             
+            let result = orGate(Boolean(x),Boolean(y))
+
+            if(result==true){
+                result = 5;
+            }
+            else{
+                result = 0;
+            }
+        </script>
+   
 
     </div>
 
