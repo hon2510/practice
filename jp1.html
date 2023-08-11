@@ -101,6 +101,14 @@
             slider1Input.addEventListener('input', function(){
                     text1Input.value = slider1Input.value;
                 })
+            var x= document.getElementById('ipv1').value;
+            var y = document.getElementById('ipv2').value;
+            var z = document.getElementById('op');
+            if(x==5||y==5){
+                     z.value = '5';
+            }else{
+                z.value = '0';
+            }
         }
         function show1(){
             const slider2Input = document.getElementById('v2cntrl');
@@ -108,22 +116,18 @@
             slider2Input.addEventListener('input', function(){
             text2Input.value = slider2Input.value;
         })
+            var x= document.getElementById('ipv1').value;
+            var y = document.getElementById('ipv2').value;
+            var z = document.getElementById('op');
+            if(x==5||y==5){
+                     z.value = '5';
+            }else{
+                z.value = '0';
+            }
         }
                     
-        function orgate(){
-            var x = parseInt(document.getElementById('ipv1').value);
-            var y = parseInt(document.getElementById('ipv2').value);
-            var result = Boolean(x)||Boolean(y);
-            let a = 5;
-            let b= 0;
-            if(result==true){
-            document.getElementById('op').value = a;
-            }
-            else{
-            document.getElementById('op')[0].value = b;
-            }
-         }
-                                
+        
+        var tableindex = 1;                        
         function add(){
             let table = document.getElementById('tableBody');
                                     
@@ -134,7 +138,8 @@
             let c3 = document.createElement('td')
             let c4 = document.createElement('td')
                                     
-             c1.innerText = "1";
+             c1.innerText = "tableindex";
+            tableindex+= 1
              c2.innerText = document.getElementById('v1cntrl').value;
              c3.innerText = document.getElementById('v2cntrl').value;
                                     
@@ -145,21 +150,8 @@
                                     
             table.appendChild(row)
         }
-            // Function to implement OR gate logic
-            // function orGate(input1, input2) {
-            //     return input1 || input2;
-            // }
-            // var x = document.getElementById('ip1').value
-            // var y = document.getElementById('ip2').value
-             
-            // let result = orGate(Boolean(x),Boolean(y))
-
-            // if(result==true){
-            //     result = 5;
-            // }
-            // else{
-            //     result = 0;
-            // }
+            
+    
         </script>
    
 
